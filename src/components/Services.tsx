@@ -4,18 +4,18 @@ const Services = () => {
   const services = [
     {
       icon: <Globe className="w-10 h-10" />,
-      title: "Digital Strategy",
-      description: "Comprehensive digital transformation strategies tailored to your business goals."
+      title: "Lead Generation",
+      description: "Full stack lead generation services for mobile detailers who specialize in ceramic coatings."
     },
     {
       icon: <Smartphone className="w-10 h-10" />,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences."
+      title: "CRM Solutions",
+      description: "Ready to implement CRM system tailored to streamline your CRM proccess and convert more leads."
     },
     {
       icon: <BarChart className="w-10 h-10" />,
-      title: "Analytics",
-      description: "Data-driven insights and performance tracking to optimize your digital presence."
+      title: "Marketing Consultations",
+      description: "Expert audits to refine and strengthen your current strategy."
     }
   ];
 
@@ -27,8 +27,7 @@ const Services = () => {
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We offer a comprehensive range of digital services designed to elevate your brand 
-            and drive meaningful results for your business.
+            Learn more about what we bring to the table for your business.
           </p>
         </div>
 
@@ -55,7 +54,7 @@ const Services = () => {
           <div className="inline-flex p-1 rounded-full bg-gradient-to-r from-primary to-accent">
             <div className="bg-background rounded-full px-8 py-3">
               <span className="gradient-text font-semibold text-lg">
-                Let's discuss your project
+                Let's discuss your business
               </span>
             </div>
           </div>
