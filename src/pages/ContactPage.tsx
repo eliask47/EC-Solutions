@@ -100,7 +100,7 @@ const ContactPage = () => {
             </div>
 
             <div className="fade-in">
-              <div className="glass-card p-8 rounded-2xl">
+              <div className="glass-card pt-0 px-8 pb-8 rounded-2xl">
                 <h2 className="text-3xl font-bold text-foreground mb-6">Why Work With Us?</h2>
                 <div className="space-y-6">
                   <div>
