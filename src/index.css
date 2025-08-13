@@ -165,6 +165,19 @@ body::after {
   animation: float 18s ease-in-out infinite reverse;
 }
 
+  /* Put the app above the orbs */
+#root { position: relative; z-index: 1; }
+
+/* Orbs: site-wide background, below content */
+body::before,
+body::after {
+  z-index: 0;            /* was -1 — change to 0 so they're visible */
+}
+
+/* Ensure the hero sits above the orbs */
+#hero { position: relative; z-index: 2; }
+
+
 /* slightly snappier path */
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg) }
