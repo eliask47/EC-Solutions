@@ -25,10 +25,10 @@ const About = () => {
             
             <div className="space-y-4">
               {[
-                "Innovative design and development",
-                "Strategic digital transformation",
-                "Comprehensive brand solutions",
-                "Results-oriented approach"
+                "Drive quality leads for detailing and coating jobs.",
+                "Ad creatives that are built to convert.",
+                "Full CRM system ready to be implemented into your business.",
+                "Strategies focused on filling your schedule."
               ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-primary" />
