@@ -42,7 +42,7 @@ const About = () => {
           <div className="glass-card p-8 rounded-2xl fade-in">
             <h4 className="text-2xl font-bold text-foreground mb-6">Why Choose Us?</h4>
             <p className="text-muted-foreground leading-relaxed">
-              Built by marketers with years of experience scaling campaigns to multiple 6-figures in revenues, we strive to streamline the lead generation process for you.
+              Built by marketers with years of experience scaling campaigns to multiple 6-figures in revenues, our multi-industry experience gives us the tools needed to properly consult and boost YOUR business.
             </p>
           </div>
         </div>
