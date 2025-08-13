@@ -15,7 +15,7 @@ const Hero = () => {
       />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 animated-gradient opacity-75" />
+      <div className="absolute inset-0 animated-gradient opacity-35" />
 
       {/* Hero content */}
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
