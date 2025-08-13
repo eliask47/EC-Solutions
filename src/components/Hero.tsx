@@ -15,11 +15,11 @@ const Hero = () => {
       
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
         <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-6 tracking-tight">
-          ELIASCOPS
+          EC Solutions
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          We are a cutting-edge agency that transforms ideas into exceptional digital experiences.
+          Lead generation that drives more cars to your front steps.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -29,7 +29,7 @@ const Hero = () => {
             onClick={() => scrollToSection('about')}
             className="min-w-[200px]"
           >
-            Discover More
+            Learn More
           </Button>
           
           <Button 
