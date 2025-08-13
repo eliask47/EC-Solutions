@@ -15,7 +15,7 @@ const Services = () => {
     {
       icon: <BarChart className="w-10 h-10" />,
       title: "Marketing Consultations",
-      description: "Expert audits to refine and strengthen your current strategy."
+      description: "Expert audits to refine and strengthen your current marketing and advertisement strategy."
     }
   ];
 
