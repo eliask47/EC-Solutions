@@ -11,10 +11,10 @@ const Hero = () => {
 
  return (
   <section id="hero" className="py-40 flex items-center justify-center relative">
-    {/* Background image from /public/images/hero-bg.png */}
+    {/* Background image from /public/images/bg.png */}
     <div 
       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: 'url(/images/hero-bg.png)' }}
+      style={{ backgroundImage: 'url(/images/bg.png)' }}
     ></div>
 
     {/* Gradient overlay */}
