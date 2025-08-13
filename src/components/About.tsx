@@ -1,27 +1,10 @@
-import { CheckCircle, Users, Lightbulb, Target } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const About = () => {
-  const features = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Expert Team",
-      description: "Our diverse team brings years of experience in digital innovation and creative problem-solving."
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Creative Solutions",
-      description: "We craft unique, tailored solutions that stand out in today's competitive digital landscape."
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "Results Driven",
-      description: "Every project is approached with clear objectives and measurable outcomes in mind."
-    }
-  ];
-
   return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section heading */}
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             About <span className="gradient-text">ELIASCOPS</span>
@@ -32,7 +15,9 @@ const About = () => {
           </p>
         </div>
 
+        {/* Mission + Why Choose Us */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left side: Mission */}
           <div className="space-y-6 fade-in">
             <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -56,6 +41,7 @@ const About = () => {
             </div>
           </div>
 
+          {/* Right side: Why Choose Us */}
           <div className="glass-card p-8 rounded-2xl fade-in">
             <h4 className="text-2xl font-bold text-foreground mb-6">Why Choose Us?</h4>
             <p className="text-muted-foreground leading-relaxed">
@@ -64,18 +50,6 @@ const About = () => {
               challenge we tackle.
             </p>
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="glass-card p-8 rounded-2xl text-center fade-in hover:scale-105 transition-all duration-300">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent mb-6 text-primary-foreground">
-                {feature.icon}
-              </div>
-              <h4 className="text-xl font-bold text-foreground mb-4">{feature.title}</h4>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
