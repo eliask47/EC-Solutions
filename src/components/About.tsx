@@ -2,7 +2,7 @@ import { CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="pt-20 pb-10 relative">
+    <section id="about" className="pt-20 pb-8 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
         <div className="text-center mb-16 fade-in">
