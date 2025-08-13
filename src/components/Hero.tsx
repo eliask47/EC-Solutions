@@ -42,17 +42,6 @@ const Hero = () => {
           </Button>
         </div>
         
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => scrollToSection('about')}
-            className="animate-bounce text-muted-foreground hover:text-primary"
-          >
-            <ArrowDown size={24} />
-          </Button>
-        </div>
       </div>
     </section>
   );
