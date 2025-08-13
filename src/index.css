@@ -155,7 +155,7 @@
   .animated-gradient {
     background: linear-gradient(-45deg, hsl(258 90% 66%), hsl(217 91% 59%), hsl(258 90% 66%), hsl(217 91% 59%));
     background-size: 600% 600%;
-    animation: gradient 8s ease infinite;
+    animation: gradient 5s ease infinite;
   }
 
   @keyframes gradient {
