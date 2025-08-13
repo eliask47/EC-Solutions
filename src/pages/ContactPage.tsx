@@ -9,25 +9,19 @@ const ContactPage = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      content: "hello@eliascops.com",
-      action: "mailto:hello@eliascops.com"
+      content: "info@eliascops.com",
+      action: "mailto:info@eliascops.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      content: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Office",
-      content: "123 Innovation Drive, Tech City, TC 12345",
-      action: null
+      content: "+1 (213) 298-5783",
+      action: "tel:+12132985783"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Business Hours",
-      content: "Mon-Fri: 9:00 AM - 6:00 PM PST",
+      content: "Mon-Fri: 9:00 AM - 6:00 PM EST",
       action: null
     }
   ];
@@ -61,10 +55,10 @@ const ContactPage = () => {
           {/* Page Header */}
           <div className="text-center mb-16 fade-in">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Contact <span className="gradient-text">ELIASCOPS</span>
+              Contact <span className="gradient-text">Us</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              We're here to help bring your vision to life. Choose your preferred way to get in touch with our team.
+              Choose your preferred way to get in touch with our team.
             </p>
           </div>
 
@@ -105,19 +99,19 @@ const ContactPage = () => {
       <div className="space-y-6">
         <div>
           <h4 className="font-semibold text-foreground mb-2">Expert Team</h4>
-          <p className="text-muted-foreground">Our experienced professionals bring diverse skills and fresh perspectives to every project.</p>
+          <p className="text-muted-foreground">Our experienced team functions as a plug-and-play solution for every business to supercharge revenues.</p>
         </div>
         <div>
           <h4 className="font-semibold text-foreground mb-2">Proven Results</h4>
-          <p className="text-muted-foreground">We have a track record of delivering successful projects that exceed client expectations.</p>
+          <p className="text-muted-foreground">We have multiple years of experience of scaling marketing campaigns to multiple 6-figures in revenues.</p>
         </div>
         <div>
           <h4 className="font-semibold text-foreground mb-2">Ongoing Support</h4>
-          <p className="text-muted-foreground">Our relationship doesn't end at project delivery. We provide continued support and maintenance.</p>
+          <p className="text-muted-foreground">We aim to build a long-term and mutually profitable relationship with our partners.</p>
         </div>
         <div>
-          <h4 className="font-semibold text-foreground mb-2">Transparent Process</h4>
-          <p className="text-muted-foreground">We believe in clear communication and transparency throughout the entire project lifecycle.</p>
+          <h4 className="font-semibold text-foreground mb-2">Money Back Guarantee</h4>
+          <p className="text-muted-foreground">Contact us to explore our different offers, all of which include a money back guarantee clause.</p>
         </div>
       </div>
     </div>
