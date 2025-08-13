@@ -24,7 +24,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-          Lead generation that drives more cars to your front steps.
+          Lead generation that drives more cars to your business.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
