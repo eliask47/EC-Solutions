@@ -7,11 +7,10 @@ const About = () => {
         {/* Section heading */}
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About <span className="gradient-text">ELIASCOPS</span>
+            About <span className="gradient-text">Us</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We are pioneers in the digital space, combining cutting-edge technology with creative excellence 
-            to deliver solutions that not only meet but exceed expectations.
+            We turn cold leads into booked clients. Proven lead generation and ad strategies built specifically for detailing, tint, wrap, and PPF shops.
           </p>
         </div>
 
@@ -21,9 +20,7 @@ const About = () => {
           <div className="space-y-6 fade-in">
             <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At ELIASCOPS, we believe in the power of innovation to transform businesses and create 
-              meaningful connections. Our mission is to bridge the gap between ambitious ideas and 
-              exceptional execution.
+              From innovating your marketing strategies to booking appointments, we handle the full marketing, lead generation, and customer relation management process for you, A-Z.
             </p>
             
             <div className="space-y-4">
@@ -45,9 +42,7 @@ const About = () => {
           <div className="glass-card p-8 rounded-2xl fade-in">
             <h4 className="text-2xl font-bold text-foreground mb-6">Why Choose Us?</h4>
             <p className="text-muted-foreground leading-relaxed">
-              With a proven track record of successful projects and satisfied clients, we bring 
-              a unique blend of creativity, technical expertise, and strategic thinking to every 
-              challenge we tackle.
+              Built by marketers with years of experience scaling campaigns to multiple 6-figures in revenues, we strive to streamline the lead generation process for you.
             </p>
           </div>
         </div>
