@@ -70,7 +70,7 @@ const ContactPage = () => {
 
 
           {/* Contact Information */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-start md:items-center">
             <div className="fade-in">
               <h2 className="text-3xl font-bold text-foreground mb-8">Get In Touch</h2>
               <div className="space-y-6">
