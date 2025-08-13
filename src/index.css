@@ -135,11 +135,11 @@
   }
 
   body::before {
-    width: 800px;
-    height: 800px;
+    width: 1000px;
+    height: 1000px;
     top: -200px;
     right: -200px;
-    background: radial-gradient(circle, hsl(258 90% 66% / 0.08) 0%, hsl(217 91% 59% / 0.05) 40%, transparent 70%);
+    background: radial-gradient(circle, hsl(258 90% 66% / 0.08) 0%, hsl(217 91% 59% / 0.05) 60%, transparent 30%);
     border-radius: 50%;
     animation: float 20s ease-in-out infinite;
   }
