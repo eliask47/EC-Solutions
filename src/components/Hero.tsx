@@ -15,7 +15,7 @@ const Hero = () => {
       
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
         <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-6 tracking-tight">
-          EC Solutions
+          EC <span className="gradient-text">Solutions</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
