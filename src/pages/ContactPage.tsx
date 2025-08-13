@@ -71,8 +71,8 @@ const ContactPage = () => {
 
           {/* Contact Information */}
 <div className="grid md:grid-cols-2 gap-12 items-start">
-  {/* Left column */}
-  <div className="fade-in flex flex-col justify-start">
+  {/* Left */}
+  <div className="fade-in">
     <h2 className="text-3xl font-bold text-foreground mb-8">Get In Touch</h2>
     <div className="space-y-6">
       {contactInfo.map((info, index) => (
@@ -84,10 +84,7 @@ const ContactPage = () => {
             <div className="flex-1">
               <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
               {info.action ? (
-                <a 
-                  href={info.action}
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
+                <a href={info.action} className="text-muted-foreground hover:text-primary transition-colors">
                   {info.content}
                 </a>
               ) : (
@@ -100,11 +97,11 @@ const ContactPage = () => {
     </div>
   </div>
 
-  {/* Right column */}
-  <div className="fade-in flex flex-col justify-start">
-    {/* Removed extra p-8 here so top matches left column */}
-    <div className="glass-card rounded-2xl p-6">
-      <h2 className="text-3xl font-bold text-foreground mb-6">Why Work With Us?</h2>
+  {/* Right */}
+  <div className="fade-in">
+    {/* Heading moved OUTSIDE the card to mirror left column */}
+    <h2 className="text-3xl font-bold text-foreground mb-8">Why Work With Us?</h2>
+    <div className="glass-card p-6 rounded-2xl">
       <div className="space-y-6">
         <div>
           <h4 className="font-semibold text-foreground mb-2">Expert Team</h4>
@@ -126,6 +123,7 @@ const ContactPage = () => {
     </div>
   </div>
 </div>
+
 
         </div>
       </main>
