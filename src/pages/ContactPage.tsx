@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Mail, Phone, MapPin, Clock, MessageSquare, Calendar } from 'lucide-react';
+import { ArrowLeft, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const ContactPage = () => {
   const navigate = useNavigate();
@@ -32,29 +32,6 @@ const ContactPage = () => {
     }
   ];
 
-  const contactMethods = [
-    {
-      icon: <MessageSquare className="w-8 h-8" />,
-      title: "Live Chat",
-      description: "Get instant answers to your questions through our live chat support.",
-      buttonText: "Start Chat",
-      available: true
-    },
-    {
-      icon: <Calendar className="w-8 h-8" />,
-      title: "Schedule Meeting",
-      description: "Book a free 30-minute consultation to discuss your project in detail.",
-      buttonText: "Book Meeting",
-      available: true
-    },
-    {
-      icon: <Mail className="w-8 h-8" />,
-      title: "Send Proposal",
-      description: "Send us your project details and we'll provide a custom proposal.",
-      buttonText: "Send Details",
-      available: true
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -91,32 +68,9 @@ const ContactPage = () => {
             </p>
           </div>
 
-          {/* Contact Methods */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {contactMethods.map((method, index) => (
-              <div 
-                key={index}
-                className="glass-card p-8 rounded-2xl text-center fade-in hover:scale-105 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent mb-6 text-primary-foreground">
-                  {method.icon}
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">{method.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{method.description}</p>
-                <Button 
-                  variant="gradient" 
-                  className="w-full"
-                  disabled={!method.available}
-                >
-                  {method.buttonText}
-                </Button>
-              </div>
-            ))}
-          </div>
 
           {/* Contact Information */}
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="fade-in">
               <h2 className="text-3xl font-bold text-foreground mb-8">Get In Touch</h2>
               <div className="space-y-6">
@@ -166,26 +120,6 @@ const ContactPage = () => {
                     <p className="text-muted-foreground">We believe in clear communication and transparency throughout the entire project lifecycle.</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16 fade-in">
-            <div className="glass-card p-12 rounded-2xl max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-foreground mb-6">
-                Ready to Transform Your Digital Presence?
-              </h3>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Let's discuss your project and explore how ELIASCOPS can help you achieve your goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl">
-                  Start Your Project
-                </Button>
-                <Button variant="glass" size="xl">
-                  View Our Portfolio
-                </Button>
               </div>
             </div>
           </div>

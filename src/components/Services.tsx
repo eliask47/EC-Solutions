@@ -1,31 +1,16 @@
-import { Palette, Code, Smartphone, Globe, Search, BarChart } from 'lucide-react';
+import { Smartphone, Globe, BarChart } from 'lucide-react';
 
 const Services = () => {
   const services = [
-    {
-      icon: <Palette className="w-10 h-10" />,
-      title: "Brand Design",
-      description: "Complete brand identity creation including logos, color schemes, and visual guidelines."
-    },
-    {
-      icon: <Code className="w-10 h-10" />,
-      title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies and best practices."
-    },
-    {
-      icon: <Smartphone className="w-10 h-10" />,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences."
-    },
     {
       icon: <Globe className="w-10 h-10" />,
       title: "Digital Strategy",
       description: "Comprehensive digital transformation strategies tailored to your business goals."
     },
     {
-      icon: <Search className="w-10 h-10" />,
-      title: "SEO Optimization",
-      description: "Search engine optimization services to improve your online visibility and rankings."
+      icon: <Smartphone className="w-10 h-10" />,
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile applications that deliver exceptional user experiences."
     },
     {
       icon: <BarChart className="w-10 h-10" />,
