@@ -57,19 +57,12 @@
     --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -125,66 +118,59 @@
     overflow-x: hidden;
   }
 
-  /* Subtle animated gradient orbs */
-/* Subtle (now less subtle) animated gradient orbs */
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  pointer-events: none;
-  z-index: -1;
-}
+  /* ---------- Animated gradient orbs (site-wide) ---------- */
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    pointer-events: none;
+    z-index: 0; /* visible behind content */
+  }
 
-body::before {
-  width: 1000px;
-  height: 1000px;
-  top: -250px;
-  right: -220px;
-  background: radial-gradient(
-    circle,
-    hsl(258 90% 66% / 0.14) 0%,
-    hsl(217 91% 59% / 0.10) 40%,
-    transparent 70%
-  );
-  border-radius: 50%;
-  animation: float 14s ease-in-out infinite;
-}
+  body::before {
+    width: 1000px;
+    height: 1000px;
+    top: -250px;
+    right: -220px;
+    background: radial-gradient(
+      circle,
+      hsl(258 90% 66% / 0.14) 0%,
+      hsl(217 91% 59% / 0.10) 40%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    animation: float 14s ease-in-out infinite;
+  }
 
-body::after {
-  width: 800px;
-  height: 800px;
-  bottom: -200px;
-  left: -180px;
-  background: radial-gradient(
-    circle,
-    hsl(217 91% 59% / 0.12) 0%,
-    hsl(258 90% 66% / 0.08) 35%,
-    transparent 65%
-  );
-  border-radius: 50%;
-  animation: float 18s ease-in-out infinite reverse;
-}
+  body::after {
+    width: 800px;
+    height: 800px;
+    bottom: -200px;
+    left: -180px;
+    background: radial-gradient(
+      circle,
+      hsl(217 91% 59% / 0.12) 0%,
+      hsl(258 90% 66% / 0.08) 35%,
+      transparent 65%
+    );
+    border-radius: 50%;
+    animation: float 18s ease-in-out infinite reverse;
+  }
 
-  /* Put the app above the orbs */
-#root { position: relative; z-index: 1; }
+  /* Stacking: app above orbs; hero above both (so orbs don't show in hero) */
+  #root { position: relative; z-index: 1; }
+  #hero { position: relative; z-index: 2; }
 
-/* Orbs: site-wide background, below content */
-body::before,
-body::after {
-  z-index: 0;            /* was -1 — change to 0 so they're visible */
-}
+  /* If your hero overlay div had opacity, force it fully opaque here */
+  #hero .animated-gradient { opacity: 1 !important; }
 
-/* Ensure the hero sits above the orbs */
-#hero { position: relative; z-index: 2; }
-
-
-/* slightly snappier path */
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) rotate(0deg) }
-  25% { transform: translate(-40px, -30px) rotate(90deg) }
-  50% { transform: translate(30px, -15px) rotate(180deg) }
-  75% { transform: translate(-25px, 25px) rotate(270deg) }
-}
+  /* Motion path for orbs */
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-40px, -30px) rotate(90deg); }
+    50%      { transform: translate(30px, -15px) rotate(180deg); }
+    75%      { transform: translate(-25px, 25px) rotate(270deg); }
+  }
 
   /* Smooth scrolling */
   html {
@@ -214,7 +200,7 @@ body::after {
     box-shadow: var(--shadow-glow);
   }
 
-  /* Animated gradient background */
+  /* Animated gradient background (hero overlay) */
   .animated-gradient {
     background: linear-gradient(-45deg, hsl(258 90% 66%), hsl(217 91% 59%), hsl(258 90% 66%), hsl(217 91% 59%));
     background-size: 600% 600%;
@@ -234,6 +220,6 @@ body::after {
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 }
