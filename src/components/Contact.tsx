@@ -17,7 +17,7 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Let's create something amazing together.
+            Consultations are 100% free of charge.
           </p>
         </div>
 
