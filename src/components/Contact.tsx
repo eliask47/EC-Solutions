@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center glass-card p-12 rounded-2xl fade-in">
             <h3 className="text-3xl font-bold text-foreground mb-6">
-              Ready to Start Your Project?
+              Ready to transform your business?
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Click the button below to access our full contact information and get in touch with our team.
