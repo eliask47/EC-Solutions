@@ -20,7 +20,7 @@ const About = () => {
           <div className="space-y-6 fade-in">
             <h3 className="text-3xl font-bold text-foreground">Our Mission</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From innovating your marketing strategies to booking appointments, we handle the full marketing, lead generation, and customer relation management process for you, A-Z.
+              Our #1 priority is to help YOUR business convert higher, and profit more. From innovating your marketing strategies to booking appointments, we handle the full marketing, lead generation, and customer relation management process for you, A-Z.
             </p>
             
             <div className="space-y-4">
