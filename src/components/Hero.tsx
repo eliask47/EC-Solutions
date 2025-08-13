@@ -9,14 +9,24 @@ const Hero = () => {
     }
   };
 
-  return (
-    <section id="hero" className="py-40 flex items-center justify-center relative">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/lovable-uploads/b496b095-c96b-4da7-8833-81a12ccc2719.png)' }}
-      ></div>
-      <div className="absolute inset-0 animated-gradient opacity-75"></div>
-      
+ return (
+  <section id="hero" className="py-40 flex items-center justify-center relative">
+    {/* Background image from /public/images/hero-bg.png */}
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: 'url(/images/hero-bg.png)' }}
+    ></div>
+
+    {/* Gradient overlay */}
+    <div className="absolute inset-0 animated-gradient opacity-75"></div>
+
+    {/* Your hero content */}
+    <div className="text-center z-10">
+      {/* ...your hero text/buttons */}
+    </div>
+  </section>
+);
+
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
         <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-6 tracking-tight">
           EC <span className="gradient-text">Solutions</span>
