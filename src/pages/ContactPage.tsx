@@ -70,59 +70,63 @@ const ContactPage = () => {
 
 
           {/* Contact Information */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="fade-in">
-              <h2 className="text-3xl font-bold text-foreground mb-8">Get In Touch</h2>
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="glass-card p-6 rounded-xl">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-primary-foreground flex-shrink-0">
-                        {info.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
-                        {info.action ? (
-                          <a 
-                            href={info.action}
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            {info.content}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground">{info.content}</p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+<div className="grid md:grid-cols-2 gap-12 items-start">
+  {/* Left column */}
+  <div className="fade-in flex flex-col justify-start">
+    <h2 className="text-3xl font-bold text-foreground mb-8">Get In Touch</h2>
+    <div className="space-y-6">
+      {contactInfo.map((info, index) => (
+        <div key={index} className="glass-card p-6 rounded-xl">
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-primary-foreground flex-shrink-0">
+              {info.icon}
             </div>
-
-            <div className="fade-in">
-              <div className="glass-card p-8 rounded-2xl">
-                <h2 className="text-3xl font-bold text-foreground mb-6">Why Work With Us?</h2>
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Expert Team</h4>
-                    <p className="text-muted-foreground">Our experienced professionals bring diverse skills and fresh perspectives to every project.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Proven Results</h4>
-                    <p className="text-muted-foreground">We have a track record of delivering successful projects that exceed client expectations.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Ongoing Support</h4>
-                    <p className="text-muted-foreground">Our relationship doesn't end at project delivery. We provide continued support and maintenance.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Transparent Process</h4>
-                    <p className="text-muted-foreground">We believe in clear communication and transparency throughout the entire project lifecycle.</p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex-1">
+              <h4 className="font-semibold text-foreground mb-1">{info.title}</h4>
+              {info.action ? (
+                <a 
+                  href={info.action}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {info.content}
+                </a>
+              ) : (
+                <p className="text-muted-foreground">{info.content}</p>
+              )}
             </div>
           </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Right column */}
+  <div className="fade-in flex flex-col justify-start">
+    {/* Removed extra p-8 here so top matches left column */}
+    <div className="glass-card rounded-2xl p-6">
+      <h2 className="text-3xl font-bold text-foreground mb-6">Why Work With Us?</h2>
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Expert Team</h4>
+          <p className="text-muted-foreground">Our experienced professionals bring diverse skills and fresh perspectives to every project.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Proven Results</h4>
+          <p className="text-muted-foreground">We have a track record of delivering successful projects that exceed client expectations.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Ongoing Support</h4>
+          <p className="text-muted-foreground">Our relationship doesn't end at project delivery. We provide continued support and maintenance.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Transparent Process</h4>
+          <p className="text-muted-foreground">We believe in clear communication and transparency throughout the entire project lifecycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </main>
     </div>
