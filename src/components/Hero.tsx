@@ -9,14 +9,13 @@ const Hero = () => {
   return (
     <section id="hero" className="py-40 flex items-center justify-center relative overflow-hidden">
       {/* Background image from /public/images/bg.png */}
-<div
-  className="absolute inset-0 bg-center bg-no-repeat bg-contain"
-  style={{ backgroundImage: 'url(/images/bg.png)' }}
-/>
-
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/images/bg.png)' }}
+      />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 animated-gradient opacity-35" />
+      <div className="absolute inset-0 animated-gradient opacity-25" />
 
       {/* Hero content */}
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
