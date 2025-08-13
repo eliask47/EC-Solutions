@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
-      <div className="absolute inset-0 animated-gradient opacity-70"></div>
+      <div className="absolute inset-0 animated-gradient opacity-30"></div>
       
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
         <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-6 tracking-tight">
