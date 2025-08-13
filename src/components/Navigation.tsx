@@ -36,7 +36,7 @@ const Navigation = () => {
             className="text-2xl font-bold gradient-text cursor-pointer"
             onClick={() => scrollToSection('hero')}
           >
-            ELIASCOPS
+            EC
           </div>
 
           {/* Desktop Navigation */}
