@@ -10,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="py-20 flex items-center justify-center relative">
+    <section id="hero" className="py-40 flex items-center justify-center relative">
       <div className="absolute inset-0 animated-gradient opacity-15"></div>
       
       <div className="text-center z-10 max-w-4xl mx-auto px-4 fade-in">
