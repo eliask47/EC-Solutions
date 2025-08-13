@@ -43,7 +43,7 @@ const ContactPage = () => {
             </Button>
             
             <div className="text-2xl font-bold gradient-text">
-              ELIASCOPS
+              EC Solutions
             </div>
           </div>
         </div>
