@@ -100,6 +100,32 @@ const ContactPage = () => {
     </div>
   </div>
 
+  {/* Right column */}
+  <div className="fade-in flex flex-col justify-start">
+    {/* Removed extra p-8 here so top matches left column */}
+    <div className="glass-card rounded-2xl p-6">
+      <h2 className="text-3xl font-bold text-foreground mb-6">Why Work With Us?</h2>
+      <div className="space-y-6">
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Expert Team</h4>
+          <p className="text-muted-foreground">Our experienced professionals bring diverse skills and fresh perspectives to every project.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Proven Results</h4>
+          <p className="text-muted-foreground">We have a track record of delivering successful projects that exceed client expectations.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Ongoing Support</h4>
+          <p className="text-muted-foreground">Our relationship doesn't end at project delivery. We provide continued support and maintenance.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground mb-2">Transparent Process</h4>
+          <p className="text-muted-foreground">We believe in clear communication and transparency throughout the entire project lifecycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
         </div>
       </main>
