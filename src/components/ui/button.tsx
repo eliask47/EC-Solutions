@@ -26,6 +26,8 @@ const buttonVariants = cva(
           "glass-card text-foreground hover:scale-105 transition-all duration-300 border-primary/20 hover:border-primary/40",
         hero:
           "bg-gradient-to-r from-primary to-accent text-primary-foreground hover:scale-105 transition-all duration-300 text-lg font-semibold px-8 py-4 rounded-xl glow",
+        nav:
+          "text-foreground border border-transparent hover:!bg-transparent hover:!border-primary hover:!text-primary transition-all duration-300 focus:!bg-transparent focus:!border-primary focus:!text-primary",
       },
       size: {
         default: "h-10 px-4 py-2",

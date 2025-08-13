@@ -42,23 +42,20 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Button 
-              variant="ghost" 
+              variant="nav" 
               onClick={() => scrollToSection('hero')}
-              className="text-foreground hover:text-primary"
             >
               Home
             </Button>
             <Button 
-              variant="ghost" 
+              variant="nav" 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary"
             >
               About Us
             </Button>
             <Button 
-              variant="ghost" 
+              variant="nav" 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary"
             >
               Contact
             </Button>
@@ -80,23 +77,23 @@ const Navigation = () => {
           <div className="md:hidden mt-4 glass-card rounded-lg p-4 fade-in">
             <div className="flex flex-col space-y-2">
               <Button 
-                variant="ghost" 
+                variant="nav" 
                 onClick={() => scrollToSection('hero')}
-                className="text-foreground hover:text-primary justify-start"
+                className="justify-start"
               >
                 Home
               </Button>
               <Button 
-                variant="ghost" 
+                variant="nav" 
                 onClick={() => scrollToSection('about')}
-                className="text-foreground hover:text-primary justify-start"
+                className="justify-start"
               >
                 About Us
               </Button>
               <Button 
-                variant="ghost" 
+                variant="nav" 
                 onClick={() => scrollToSection('contact')}
-                className="text-foreground hover:text-primary justify-start"
+                className="justify-start"
               >
                 Contact
               </Button>
