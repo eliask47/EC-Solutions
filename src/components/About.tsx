@@ -8,14 +8,24 @@ const About = () => {
     const dashboard = dashboardRef.current;
     if (!dashboard) return;
 
-    const handleScroll = () => {
+    let animationFrameId: number;
+    const startTime = Date.now();
+
+    const updateTransform = () => {
+      const currentTime = Date.now();
+      const elapsed = (currentTime - startTime) / 1000; // Convert to seconds
+      
+      // Calculate floating effect (synchronized with original CSS timing)
+      const floatingOffset = Math.sin(elapsed * 0.8) * 8; // 8px amplitude, slower frequency
+      
       const rect = dashboard.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
       const elementTop = rect.top;
       const elementBottom = rect.bottom;
       const elementHeight = rect.height;
 
-      // Calculate how much of the element is visible and its position
+      // Calculate rotation based on scroll position
+      let rotationX = 0;
       if (elementBottom > 0 && elementTop < viewportHeight) {
         // Element is in viewport
         const elementCenter = elementTop + elementHeight / 2;
@@ -25,29 +35,32 @@ const About = () => {
         const scrollProgress = (viewportCenter - elementCenter) / viewportHeight;
         
         // Apply rotation based on scroll position with mobile enhancement
-        // When element is above viewport center: positive rotation (top larger)
-        // When element is below viewport center: negative rotation (bottom larger)
         const isMobile = window.innerWidth <= 768;
         const baseRotation = scrollProgress * 30; // Max 30 degrees rotation
         const mobileMultiplier = isMobile ? 1.6 : 1; // 60% stronger on mobile
-        const rotationX = baseRotation * mobileMultiplier;
+        rotationX = baseRotation * mobileMultiplier;
         
         // Clamp rotation (wider range for mobile)
         const maxRotation = isMobile ? 35 : 25;
         const minRotation = isMobile ? -28 : -20;
-        const clampedRotation = Math.max(minRotation, Math.min(maxRotation, rotationX));
-        
-        dashboard.style.transform = `rotateX(${clampedRotation}deg) translateY(var(--float-y, 0))`;
+        rotationX = Math.max(minRotation, Math.min(maxRotation, rotationX));
       }
+      
+      // Apply both rotation and floating in a single transform
+      dashboard.style.transform = `rotateX(${rotationX}deg) translateY(${floatingOffset}px)`;
+      
+      // Continue animation
+      animationFrameId = requestAnimationFrame(updateTransform);
     };
 
-    // Initial call
-    handleScroll();
+    // Start the animation loop
+    updateTransform();
     
-    // Add scroll listener
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, []);
   return (
     <section id="about" className="pt-20 pb-8 relative">
