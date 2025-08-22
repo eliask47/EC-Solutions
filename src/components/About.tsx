@@ -36,7 +36,7 @@ const About = () => {
         
         // Apply rotation based on scroll position with mobile enhancement
         const isMobile = window.innerWidth <= 768;
-        const baseRotation = scrollProgress * 30; // Max 30 degrees rotation
+        const baseRotation = scrollProgress * -30; // Max 30 degrees rotation (reversed)
         const mobileMultiplier = isMobile ? 1.6 : 1; // 60% stronger on mobile
         rotationX = baseRotation * mobileMultiplier;
         
