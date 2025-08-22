@@ -24,13 +24,18 @@ const About = () => {
         // Calculate scroll progress (-1 to 1, where 0 is center of viewport)
         const scrollProgress = (viewportCenter - elementCenter) / viewportHeight;
         
-        // Apply rotation based on scroll position
+        // Apply rotation based on scroll position with mobile enhancement
         // When element is above viewport center: positive rotation (top larger)
         // When element is below viewport center: negative rotation (bottom larger)
-        const rotationX = scrollProgress * 30; // Max 30 degrees rotation
+        const isMobile = window.innerWidth <= 768;
+        const baseRotation = scrollProgress * 30; // Max 30 degrees rotation
+        const mobileMultiplier = isMobile ? 1.6 : 1; // 60% stronger on mobile
+        const rotationX = baseRotation * mobileMultiplier;
         
-        // Clamp rotation between -20 and 25 degrees
-        const clampedRotation = Math.max(-20, Math.min(25, rotationX));
+        // Clamp rotation (wider range for mobile)
+        const maxRotation = isMobile ? 35 : 25;
+        const minRotation = isMobile ? -28 : -20;
+        const clampedRotation = Math.max(minRotation, Math.min(maxRotation, rotationX));
         
         dashboard.style.transform = `rotateX(${clampedRotation}deg) translateY(var(--float-y, 0))`;
       }
