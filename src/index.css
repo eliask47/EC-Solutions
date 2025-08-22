@@ -214,44 +214,30 @@
 
   /* 3D Analytics Dashboard Effects */
   .analytics-3d-container {
-    perspective: 1000px;
+    perspective: 1200px;
     transform-style: preserve-3d;
   }
 
   .analytics-dashboard {
-    transform: rotateX(15deg) translateZ(0);
-    animation: float 4s ease-in-out infinite, scroll3d 1s ease-out;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: rotateX(15deg);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
+    animation: dashboard-float 4s ease-in-out infinite;
   }
 
-  @keyframes float {
+  @keyframes dashboard-float {
     0%, 100% { 
-      transform: rotateX(15deg) translateY(0) translateZ(0); 
+      --float-y: 0px;
     }
     50% { 
-      transform: rotateX(15deg) translateY(-8px) translateZ(0); 
+      --float-y: -8px;
     }
   }
 
-  @keyframes scroll3d {
-    0% { transform: rotateX(25deg) translateZ(-50px); }
-    100% { transform: rotateX(15deg) translateZ(0); }
-  }
-
-  /* Scroll-triggered 3D effect via intersection observer classes */
-  .analytics-dashboard.scrolled-top {
-    animation: float 4s ease-in-out infinite;
-    transform: rotateX(25deg) translateZ(-20px);
-  }
-  
-  .analytics-dashboard.scrolled-center {
-    animation: float 4s ease-in-out infinite;
-    transform: rotateX(0deg) translateZ(0);
-  }
-  
-  .analytics-dashboard.scrolled-bottom {
-    animation: float 4s ease-in-out infinite;
-    transform: rotateX(-15deg) translateZ(-10px);
+  /* Apply the floating animation with CSS custom property */
+  @property --float-y {
+    syntax: '<length>';
+    initial-value: 0px;
+    inherits: false;
   }
 }

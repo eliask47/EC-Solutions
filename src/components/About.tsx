@@ -8,34 +8,41 @@ const About = () => {
     const dashboard = dashboardRef.current;
     if (!dashboard) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const rect = entry.boundingClientRect;
-            const viewportHeight = window.innerHeight;
-            const elementCenter = rect.top + rect.height / 2;
-            const scrollProgress = (viewportHeight - elementCenter) / viewportHeight;
+    const handleScroll = () => {
+      const rect = dashboard.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
+      const elementHeight = rect.height;
 
-            // Remove all scroll classes
-            dashboard.classList.remove('scrolled-top', 'scrolled-center', 'scrolled-bottom');
+      // Calculate how much of the element is visible and its position
+      if (elementBottom > 0 && elementTop < viewportHeight) {
+        // Element is in viewport
+        const elementCenter = elementTop + elementHeight / 2;
+        const viewportCenter = viewportHeight / 2;
+        
+        // Calculate scroll progress (-1 to 1, where 0 is center of viewport)
+        const scrollProgress = (viewportCenter - elementCenter) / viewportHeight;
+        
+        // Apply rotation based on scroll position
+        // When element is above viewport center: positive rotation (top larger)
+        // When element is below viewport center: negative rotation (bottom larger)
+        const rotationX = scrollProgress * 30; // Max 30 degrees rotation
+        
+        // Clamp rotation between -20 and 25 degrees
+        const clampedRotation = Math.max(-20, Math.min(25, rotationX));
+        
+        dashboard.style.transform = `rotateX(${clampedRotation}deg) translateY(var(--float-y, 0))`;
+      }
+    };
 
-            // Add appropriate class based on scroll position
-            if (scrollProgress < 0.3) {
-              dashboard.classList.add('scrolled-top');
-            } else if (scrollProgress > 0.7) {
-              dashboard.classList.add('scrolled-bottom');
-            } else {
-              dashboard.classList.add('scrolled-center');
-            }
-          }
-        });
-      },
-      { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: '-10% 0px -10% 0px' }
-    );
-
-    observer.observe(dashboard);
-    return () => observer.disconnect();
+    // Initial call
+    handleScroll();
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <section id="about" className="pt-20 pb-8 relative">
