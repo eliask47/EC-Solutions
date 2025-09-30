@@ -378,6 +378,17 @@
     🚀 Lock In Your Free Spot →
   </a>
 </div>
+
+<script>
+  // Listen for Calendly events
+  window.addEventListener('message', function(e) {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+      // Redirect to your thank-you page
+      window.location.href = "https://eliascops.com/";
+    }
+  });
+</script>
+
 	
 <!-- REPLACE this entire spacer block -->
 <div data-v-4b3acc2c="" data-v-6bea8f81="" data-eid="148586" id="148586" class="section_row"
