@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://g45h4hh4.myfunnelish.com/new-landing-page -->
-<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_wmYoLr"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_wmYoLr"></div><head>
+	<style>
+  /* Center Funnelish image elements after export */
+  .img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 						<title>New Landing page</title>
 						
 						<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -390,116 +400,100 @@
     text-align: center;
   }
 } </style><div class="paragraph-inner"><p><strong>2 years ago, I was a broke college student.. until I discovered paid ads. Since then, I've generated over $300,000 through ads and now spend my time travelling across the country. Paid ads is the <u>ONLY</u> way to supercharge your business from $1k-3k/month to $5k-10k+/month.</strong></p><p><br></p><p><strong>👉 If you’re serious about growing your detailing business and tired of guessing where your next customer will come from, I can help you. Book a free call today and I’ll show you exactly how we can start filling your calendar this month.</strong></p></div></div></div></div></div><div data-v-4b3acc2c="" data-v-6bea8f81="" data-eid="740532" id="740532" class="section_row" style="border-width: 0px; border-style: solid; border-color: transparent; color: rgb(48, 48, 48); font-size: 14px; text-align: initial; margin: 0px; padding: 0px; background-size: auto; background-repeat: no-repeat;"><div data-v-796cd32d="" data-v-4b3acc2c="" class="row-column" style="width: 100%;"><div data-v-8eb46620="" data-v-796cd32d="" data-eid="391322" class="element-wrapper"><div data-v-8eb46620="" id="391322" class="custom" style="margin: 10px 0px 0px;"><div class="custom-inner el-391322"><script src="./inbound lander_files/saved_resource"></script><style>
-    /* Custom CSS for Scroll Snap and Layout */
-    #imageSlider {
-        /* Applying font-family here instead of the global body tag */
-        font-family: 'Inter', sans-serif;
-        /* Full width by default, padding creates the visible 'peak' of side images */
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scroll-snap-type: x mandatory; /* Snap precisely to the center of each image */
-        
-        /* INCREASED PADDING for more obvious peak */
-        padding-left: 2rem;
-        padding-right: 2rem;
-        
-        width: 100%; /* Ensure it takes the full width of the parent container */
-        /* Removed py-4 here to prevent conflicts with host page spacing */
-    }
-    #imageSlider::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
+<!-- Replace your current slider <div id="imageSlider" ...> with this block -->
+<style>
+  /* Keep your current slider CSS if you prefer; this is the minimal needed */
+  #imageSlider {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+    padding-left: 1rem;  /* gives the “peek” */
+    padding-right: 1rem; /* gives the “peek” */
+    display: flex;
+    gap: 1rem;
+  }
+  #imageSlider::-webkit-scrollbar { display: none; }
 
-    .slider-item-container {
-        flex-shrink: 0;
-        /* DECREASED WIDTH for smaller image and bigger peak */
-        width: 65vw; 
-        margin-right: 1rem; /* Spacing between images */
-        scroll-snap-align: center; /* Center the image in the scroll container */
-        
-        /* EVEN SMOOTHER TRANSITION (0.8s) - This controls the speed of the CSS animation */
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
-        
-        opacity: 0.5; /* Default opacity for non-centered images (will be updated by JS) */
-        transform: scale(0.95); /* Default scale for non-centered images */
-    }
+  .slider-item-container {
+    flex-shrink: 0;
+    width: 70vw;                /* shows peaks left/right on mobile */
+    scroll-snap-align: center;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0.5;
+    transform: scale(0.96);
+  }
+  .slider-item-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+</style>
 
-    /* Ensure the last item has no right margin to prevent extra blank space */
-    #imageSlider div:last-child {
-        margin-right: 0;
-    }
+<div id="imageSlider">
+  <div class="slider-item-container">
+    <img src="https://eliascops.com/images/IMG_0023.jpg" alt="Detailing sample 1"
+         onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_0023';">
+  </div>
+  <div class="slider-item-container">
+    <img src="https://eliascops.com/images/IMG_0578.jpg" alt="Detailing sample 2"
+         onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_0578';">
+  </div>
+  <div class="slider-item-container">
+    <img src="https://eliascops.com/images/IMG_1547.jpg" alt="Detailing sample 3"
+         onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_1547';">
+  </div>
+  <div class="slider-item-container">
+    <img src="https://eliascops.com/images/IMG_9369.jpg" alt="Detailing sample 4"
+         onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_9369';">
+  </div>
+</div>
 
-    /* Ensure images fill their containers */
-    .slider-item-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-</style><div id="imageSlider" class="flex"><div class="slider-item-container" id="slide-1" style="opacity: 0.976187; transform: scale(0.998016);"><img src="./inbound lander_files/IMG_0023.jpg" alt="Product Image 1: IMG_0023" class="object-cover rounded-lg shadow-lg border-4 border-white" onerror="this.onerror=null; this.src=&#39;https://placehold.co/400x500/10b981/ffffff?text=Image+1+Fallback&#39;"></div><div class="slider-item-container" id="slide-2" style="opacity: 0.4; transform: scale(0.95);"><img src="./inbound lander_files/IMG_0578.jpg" alt="Product Image 2: IMG_0578" class="object-cover rounded-lg shadow-lg border-4 border-white" onerror="this.onerror=null; this.src=&#39;https://placehold.co/400x500/10b981/ffffff?text=Image+2+Fallback&#39;"></div><div class="slider-item-container" id="slide-3" style="opacity: 0.4; transform: scale(0.95);"><img src="./inbound lander_files/IMG_1547.jpg" alt="Product Image 3: IMG_1547" class="object-cover rounded-lg shadow-lg border-4 border-white" onerror="this.onerror=null; this.src=&#39;https://placehold.co/400x500/10b981/ffffff?text=Image+3+Fallback&#39;"></div><div class="slider-item-container" id="slide-4" style="opacity: 0.4; transform: scale(0.95);"><img src="./inbound lander_files/IMG_9369.jpg" alt="Product Image 4: IMG_9369" class="object-cover rounded-lg shadow-lg border-4 border-white" onerror="this.onerror=null; this.src=&#39;https://placehold.co/400x500/10b981/ffffff?text=Image+4+Fallback&#39;"></div></div><script>
+<script>
+  // Dynamic fade/scale: highlight the centered slide
+  (function () {
     const slider = document.getElementById('imageSlider');
-    const slides = document.querySelectorAll('.slider-item-container');
-    let isTicking = false; // Flag for requestAnimationFrame optimization
+    const slides = Array.from(slider.querySelectorAll('.slider-item-container'));
+    let ticking = false;
 
-    /**
-     * Updates the opacity and scale of the slides based on how close
-     * they are to the center of the scroll container (for the dynamic fade effect).
-     */
-    function updateOpacity() {
-        // Use getBoundingClientRect to get current, dynamic positions
-        const sliderRect = slider.getBoundingClientRect();
-        // Center of the visible scroll area
-        const sliderCenter = sliderRect.left + sliderRect.width / 2;
-        
-        // Define the desired minimum opacity and minimum scale for peaked images
-        const MIN_OPACITY = 0.4; 
-        const MIN_SCALE = 0.95;
-        
-        slides.forEach(slide => {
-            const slideRect = slide.getBoundingClientRect();
-            // Center of the current slide
-            const slideCenter = slideRect.left + slideRect.width / 2;
-            
-            // Calculate the distance from the slide center to the slider center
-            const distance = Math.abs(slideCenter - sliderCenter);
-            
-            // Normalize the distance. Use 75% of the slide width for the effect range.
-            const maxDistanceForEffect = slideRect.width * 0.75;
-            const normalizedDistance = Math.min(distance / maxDistanceForEffect, 1);
-            
-            // Calculate dynamic opacity: 1 (centered) down to MIN_OPACITY (peaking)
-            const opacity = 1 - (normalizedDistance * (1 - MIN_OPACITY));
-            slide.style.opacity = opacity;
-            
-            // Calculate dynamic scale: 1 (centered) down to MIN_SCALE (peaking)
-            const scale = 1 - (normalizedDistance * (1 - MIN_SCALE));
-            slide.style.transform = `scale(${scale})`;
+    function update() {
+      const rect = slider.getBoundingClientRect();
+      const center = rect.left + rect.width / 2;
+      const MIN_OPACITY = 0.45;
+      const MIN_SCALE = 0.95;
+
+      slides.forEach(slide => {
+        const r = slide.getBoundingClientRect();
+        const slideCenter = r.left + r.width / 2;
+        const dist = Math.abs(slideCenter - center);
+        const range = r.width * 0.75;
+        const k = Math.min(dist / range, 1);
+        const opacity = 1 - k * (1 - MIN_OPACITY);
+        const scale = 1 - k * (1 - MIN_SCALE);
+        slide.style.opacity = opacity.toFixed(3);
+        slide.style.transform = `scale(${scale.toFixed(3)})`;
+      });
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
         });
+        ticking = true;
+      }
     }
 
-    /**
-     * Uses requestAnimationFrame to optimize the scroll handler.
-     * This makes the dynamic fading/scaling effect much smoother and less 'jumpy'.
-     */
-    function handleScroll() {
-        if (!isTicking) {
-            window.requestAnimationFrame(() => {
-                updateOpacity();
-                isTicking = false;
-            });
-            isTicking = true;
-        }
-    }
-
-    // Bind the optimized handler to scroll and resize events
-    slider.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll);
-    
-    // Initial call to set the correct state when the content is rendered
-    // Added a slight delay for better initialization of bounding boxes
-    setTimeout(updateOpacity, 100); 
-</script></div></div></div><div data-v-8eb46620="" data-v-796cd32d="" data-eid="97336" class="element-wrapper"><div data-v-8eb46620="" id="97336" class="custom" style="margin: 35px 0px;"><div class="custom-inner el-97336"><link href="./inbound lander_files/widget.css" rel="stylesheet"><script src="./inbound lander_files/widget.js.download" async=""></script><div style="text-align: center; margin-top: 30px;"><a href="https://g45h4hh4.myfunnelish.com/new-landing-page" onclick="Calendly.initPopupWidget({url: &#39;https://calendly.com/eliascops?hide_gdpr_banner=1&#39;});return false;" style="background: linear-gradient(135deg, #4f46e5, #6366f1); 
+    slider.addEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    setTimeout(update, 60);
+  })();
+</script>
+</div></div></div><div data-v-8eb46620="" data-v-796cd32d="" data-eid="97336" class="element-wrapper"><div data-v-8eb46620="" id="97336" class="custom" style="margin: 35px 0px;"><div class="custom-inner el-97336"><link href="./inbound lander_files/widget.css" rel="stylesheet"><script src="./inbound lander_files/widget.js.download" async=""></script><div style="text-align: center; margin-top: 30px;"><a href="https://g45h4hh4.myfunnelish.com/new-landing-page" onclick="Calendly.initPopupWidget({url: &#39;https://calendly.com/eliascops?hide_gdpr_banner=1&#39;});return false;" style="background: linear-gradient(135deg, #4f46e5, #6366f1); 
            color: white; 
            padding: 14px 28px; 
            border-radius: 12px; 
