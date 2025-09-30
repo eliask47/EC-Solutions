@@ -402,58 +402,70 @@
 } </style><div class="paragraph-inner"><p><strong>2 years ago, I was a broke college student.. until I discovered paid ads. Since then, I've generated over $300,000 through ads and now spend my time travelling across the country. Paid ads is the <u>ONLY</u> way to supercharge your business from $1k-3k/month to $5k-10k+/month.</strong></p><p><br></p><p><strong>👉 If you’re serious about growing your detailing business and tired of guessing where your next customer will come from, I can help you. Book a free call today and I’ll show you exactly how we can start filling your calendar this month.</strong></p></div></div></div></div></div><div data-v-4b3acc2c="" data-v-6bea8f81="" data-eid="740532" id="740532" class="section_row" style="border-width: 0px; border-style: solid; border-color: transparent; color: rgb(48, 48, 48); font-size: 14px; text-align: initial; margin: 0px; padding: 0px; background-size: auto; background-repeat: no-repeat;"><div data-v-796cd32d="" data-v-4b3acc2c="" class="row-column" style="width: 100%;"><div data-v-8eb46620="" data-v-796cd32d="" data-eid="391322" class="element-wrapper"><div data-v-8eb46620="" id="391322" class="custom" style="margin: 10px 0px 0px;"><div class="custom-inner el-391322"><script src="./inbound lander_files/saved_resource"></script><style>
 <!-- Replace your current slider <div id="imageSlider" ...> with this block -->
 <style>
-  /* Keep your current slider CSS if you prefer; this is the minimal needed */
+<!-- BEGIN: Minimal, self-contained image slider -->
+<style>
+  /* Container: horizontal scroll + snap */
   #imageSlider {
-    overflow-x: scroll;
+    display: flex !important;              /* force horizontal layout */
+    flex-direction: row !important;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
     scroll-snap-type: x mandatory;
-    padding-left: 1rem;  /* gives the “peek” */
-    padding-right: 1rem; /* gives the “peek” */
-    display: flex;
-    gap: 1rem;
+    gap: 12px;
+    padding: 0 16px;                       /* small side “peek” padding */
+    scrollbar-width: none;                 /* Firefox hide */
   }
-  #imageSlider::-webkit-scrollbar { display: none; }
+  #imageSlider::-webkit-scrollbar { display: none; } /* WebKit hide */
 
-  .slider-item-container {
-    flex-shrink: 0;
-    width: 70vw;                /* shows peaks left/right on mobile */
+  /* Each slide card */
+  #imageSlider .slider-item-container {
+    flex: 0 0 70vw;                        /* << controls how much shows; 70vw = mobile friendly peek */
+    max-width: 520px;                      /* optional cap for larger screens */
     scroll-snap-align: center;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     opacity: 0.5;
     transform: scale(0.96);
   }
-  .slider-item-container img {
+
+  /* Image styling */
+  #imageSlider .slider-item-container img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 12px;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.10);
+    border: 4px solid #fff;
   }
+
+  /* (Optional) make the section full-bleed on narrow containers */
+  .ec-wrap{padding-left:0;padding-right:0}
 </style>
 
-<div id="imageSlider">
+<div id="imageSlider" class="ec-wrap">
   <div class="slider-item-container">
-    <img src="https://eliascops.com/images/IMG_0023.jpg" alt="Detailing sample 1"
+    <img src="https://eliascops.com/images/IMG_0023.jpg"
+         alt="Detail sample 1"
          onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_0023';">
   </div>
   <div class="slider-item-container">
-    <img src="https://eliascops.com/images/IMG_0578.jpg" alt="Detailing sample 2"
+    <img src="https://eliascops.com/images/IMG_0578.jpg"
+         alt="Detail sample 2"
          onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_0578';">
   </div>
   <div class="slider-item-container">
-    <img src="https://eliascops.com/images/IMG_1547.jpg" alt="Detailing sample 3"
+    <img src="https://eliascops.com/images/IMG_1547.jpg"
+         alt="Detail sample 3"
          onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_1547';">
   </div>
   <div class="slider-item-container">
-    <img src="https://eliascops.com/images/IMG_9369.jpg" alt="Detailing sample 4"
+    <img src="https://eliascops.com/images/IMG_9369.jpg"
+         alt="Detail sample 4"
          onerror="this.onerror=null; this.src='https://placehold.co/600x800/111/fff?text=IMG_9369';">
   </div>
 </div>
 
 <script>
-  // Dynamic fade/scale: highlight the centered slide
+  // Dynamic fade/scale based on which slide is centered
   (function () {
     const slider = document.getElementById('imageSlider');
     const slides = Array.from(slider.querySelectorAll('.slider-item-container'));
@@ -469,7 +481,7 @@
         const r = slide.getBoundingClientRect();
         const slideCenter = r.left + r.width / 2;
         const dist = Math.abs(slideCenter - center);
-        const range = r.width * 0.75;
+        const range = r.width * 0.75; // sensitivity
         const k = Math.min(dist / range, 1);
         const opacity = 1 - k * (1 - MIN_OPACITY);
         const scale = 1 - k * (1 - MIN_SCALE);
@@ -480,19 +492,18 @@
 
     function onScroll() {
       if (!ticking) {
-        requestAnimationFrame(() => {
-          update();
-          ticking = false;
-        });
+        requestAnimationFrame(() => { update(); ticking = false; });
         ticking = true;
       }
     }
 
     slider.addEventListener('scroll', onScroll);
     window.addEventListener('resize', onScroll);
-    setTimeout(update, 60);
+    setTimeout(update, 60); // initialize after render
   })();
 </script>
+<!-- END: Minimal, self-contained image slider -->
+
 </div></div></div><div data-v-8eb46620="" data-v-796cd32d="" data-eid="97336" class="element-wrapper"><div data-v-8eb46620="" id="97336" class="custom" style="margin: 35px 0px;"><div class="custom-inner el-97336"><link href="./inbound lander_files/widget.css" rel="stylesheet"><script src="./inbound lander_files/widget.js.download" async=""></script><div style="text-align: center; margin-top: 30px;"><a href="https://g45h4hh4.myfunnelish.com/new-landing-page" onclick="Calendly.initPopupWidget({url: &#39;https://calendly.com/eliascops?hide_gdpr_banner=1&#39;});return false;" style="background: linear-gradient(135deg, #4f46e5, #6366f1); 
            color: white; 
            padding: 14px 28px; 
