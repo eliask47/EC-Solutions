@@ -380,22 +380,36 @@
 </div>
 
 <style>
-  /* Kill extra space under the Calendly button block */
+  /* Nuke ALL margins/padding around the Calendly block */
+  #875343, 
   #875343.custom,
+  #875343 .element-wrapper,
+  #875343 .custom,
   #875343 .custom-inner,
-  #875343 .custom-inner > div { margin:0 !important; padding:0 !important; }
+  #875343 .custom-inner > * {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* Make sure the button wrapper doesn't add spacing */
+  #875343 .custom-inner a {
+    display: inline-block;
+    margin: 0 !important;
+  }
 
-  /* Make the button itself not add any bottom spacing */
-  #875343 .custom-inner a { display:inline-block; margin:0 !important; }
-
-  /* The spacer row that draws the horizontal line right after the button */
-  #148586 { margin:8px 0 0 !important; padding:0 !important; }
+  /* The next row is your horizontal rule spacer (id=148586). Tighten it. */
+  #148586,
+  #148586 .row-column,
   #148586 .element-wrapper,
   #148586 .spacer,
-  #148586 .spacer .inner-spacer { margin:0 !important; padding:0 !important; }
+  #148586 .spacer .inner-spacer {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* Keep a thin line only (optional) */
+  #148586 .inner-spacer { border-top-width: 1px !important; }
 
-  /* Optional: tighten the horizontal rule thickness */
-  #148586 .inner-spacer { border-top-width:1px !important; }
+  /* If any default section padding is applied on the wrapper row, kill it */
+  #562474.section_row { margin: 0 !important; padding: 0 !important; }
 </style>
 
 
