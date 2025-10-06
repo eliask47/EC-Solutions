@@ -30,6 +30,18 @@
 						<link rel="preload" href="./thankyou_files/core.min.js.download" as="script">
 						<link rel="preload" href="./thankyou_files/core.min.css" as="style">
 
+<!-- Force vertical stacking everywhere -->
+<style>
+  /* Beat the per-section rules */
+  :root .section_row {
+    display: flex !important;
+    flex-direction: column !important;   /* key fix */
+    align-items: stretch !important;
+  }
+  :root .section_row > .row-column {
+    width: 100% !important;
+  }
+</style>
 						
 						
 	<!-- custom fonts -->
