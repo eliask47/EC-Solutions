@@ -407,6 +407,25 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
   });
 </script>
 </div>
+
+<script>
+// Fire conversion when a Calendly booking is completed
+window.addEventListener('message', function (e) {
+  if (e && e.data && e.data.event === 'calendly.event_scheduled') {
+    // Custom event for your Custom Conversion
+    fbq('trackCustom', 'Call_Booked');
+
+    // (Optional) also send a standard event for reporting/optimization
+    fbq('track', 'Lead');
+
+    // Your existing redirect
+    setTimeout(function () {
+      window.location.href = 'https://eliascops.com/thankyou';
+    }, 2000);
+  }
+});
+</script>
+
 	
 <!-- REPLACE this entire spacer block -->
 <div data-v-4b3acc2c="" data-v-6bea8f81="" data-eid="148586" id="148586" class="section_row"
