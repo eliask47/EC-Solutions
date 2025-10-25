@@ -405,9 +405,17 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
 
 <script>
 window.addEventListener('message', function(e) {
+  // Check for the expected event from Calendly
   if (e && e.data && e.data.event === 'calendly.event_scheduled') {
-    fbq('trackCustom', 'Call_Booked');  // Custom event for optimization
-    fbq('track', 'Lead');               // Optional: Meta standard event
+    // Check if the fbq function exists before calling it (safety measure)
+    if (typeof fbq === 'function') {
+      fbq('trackCustom', 'Call_Booked'); // Custom event for optimization
+      fbq('track', 'Lead');             // Optional: Meta standard event
+    } else {
+      console.warn("Meta Pixel (fbq) not loaded. Skipping event tracking.");
+    }
+    
+    // Redirect after a short delay
     setTimeout(() => {
       window.location.href = 'https://eliascops.com/thankyou';
     }, 2000);
@@ -415,37 +423,50 @@ window.addEventListener('message', function(e) {
 });
 </script>
 
-</style><div class="paragraph-inner"><p>No catches or surprises, we won't charge you hidden fees.</p></div></div></div></div></div><div data-v-8eb46620="" class="img el-144541" id="144541" style="margin: 10px 0px 0px;">
+<div class="paragraph-inner">
+  <p>No catches or surprises, we won't charge you hidden fees.</p>
+</div>
+
+<div class="img el-144541" id="144541" style="margin: 10px 0px 0px; display: flex; align-items: center;">
   <style>
     .el-144541 {
-      align-items: center;
+      align-items: center; /* This CSS is redundant since it's inline, but kept for completeness */
     }
   </style>
 
-  <!-- spacer goes here if you want space between elements -->
   <div style="height:20px;"></div>
-
 </div>
 
-<div data-v-4b3acc2c="" data-v-6bea8f81="" data-eid="148586" id="148586" class="section_row">
+<div data-eid="148586" id="148586" class="section_row" 
      style="border-width:0px; border-style:solid; border-color:transparent; color:rgb(48,48,48); font-size:14px; text-align:initial; margin:0; padding:50px 0; background-size:auto; background-repeat:no-repeat;">
-  <div data-v-796cd32d="" data-v-4b3acc2c="" class="row-column" style="width:100%;">
-    <div data-v-8eb46620="" data-v-796cd32d="" data-eid="227139" class="element-wrapper" style="margin:0; padding:0;">
-      <div data-v-8eb46620="" id="227139" class="spacer form_group with_edit_btn" style="margin:0 50px; padding:0;">
-        <div class="inner-spacer"
-             style="border-top:1.5px solid rgb(0,0,0); height:0; line-height:0; margin:0; padding:0;"></div>
+  <div class="row-column" style="width:100%;">
+    <div data-eid="227139" class="element-wrapper" style="margin:0; padding:0;">
+      <div id="227139" class="spacer form_group with_edit_btn" style="margin:0 50px; padding:0;">
+        <div class="inner-spacer" style="border-top:1.5px solid rgb(0,0,0); height:0; line-height:0; margin:0; padding:0;"></div>
       </div>
     </div>
   </div>
 </div>
-<div data-v-4b3acc2c="" data-v-6bea8f81="" data-eid="595637" id="595637" class="section_row" style="border-width: 0px; border-style: solid; border-color: transparent; color: rgb(48, 48, 48); font-size: 14px; text-align: initial; margin: 0px; padding: 0px; background-size: auto; background-repeat: no-repeat;"><div data-v-796cd32d="" data-v-4b3acc2c="" class="row-column" style="width: 100%;"><div data-v-8eb46620="" data-v-796cd32d="" data-eid="951746" class="element-wrapper"><div data-v-8eb46620="" class="img el-951746" id="951746" style="margin: 10px 0px 0px;"><style> 
-.el-951746 {
-    align-items:center;
-}
-.el-951746 img {
-    
-}
 
+<div data-eid="595637" id="595637" class="section_row" 
+     style="border-width: 0px; border-style: solid; border-color: transparent; color: rgb(48, 48, 48); font-size: 14px; text-align: initial; margin: 0px; padding: 0px; background-size: auto; background-repeat: no-repeat;">
+  <div class="row-column" style="width: 100%;">
+    <div data-eid="951746" class="element-wrapper">
+      <div class="img el-951746" id="951746" style="margin: 10px 0px 0px; display: flex; align-items: center;">
+        <style> 
+          .el-951746 {
+            align-items: center;
+          }
+          .el-951746 img {
+            /* Placeholder for image styling - original was empty */
+            max-width: 100%; 
+            height: auto;
+          }
+        </style>
+        </div>
+    </div>
+  </div>
+</div>
 
  </style><img src="https://eliascops.com/images/New%20Project%20%283%29.png"
      alt="Mark"
