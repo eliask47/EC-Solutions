@@ -622,13 +622,14 @@ window.addEventListener('message', function(e) {
     text-align: center !important;
     margin: 0 auto !important;
   }
-
-  /* Make this specific image bigger on desktop */
-  img[src*="New%20Project%20(2).png"] {
-    width: 600px !important;  /* adjust if you want even larger */
-    max-width: 90%;
-  }
-
+	
+/* Force larger size for this specific image on desktop */
+img[src*="New%20Project%20(2).png"] {
+  width: 750px !important;       /* make it noticeably bigger */
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
 	
   /* Center images and keep them responsive */
   img {
