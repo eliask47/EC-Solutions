@@ -591,37 +591,47 @@ window.addEventListener('message', function(e) {
 /* Desktop-only adjustments */
 @media (min-width: 1024px) {
 
-  /* Keep content centered but give the page a bit more breathing room */
+  /* Keep everything centered on the page */
   .main_wrapper_main {
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     text-align: center;
     padding: 60px 0 100px;
   }
 
-  /* Make spacers / dividers narrower (about 50% width) */
+  /* Spacer line — about 65% width for balance */
   .inner-spacer {
-    width: 50% !important;
+    width: 65% !important;
     margin: 0 auto !important;
   }
 
-  /* Keep text nicely readable and centered */
+  /* Ensure all text stays centered and aligned */
   .el-157305,
   .el-565796,
   .el-643651,
   .el-658733 {
-    max-width: 700px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto !important;
     text-align: center !important;
   }
 
-  /* Center images */
+  /* Make sure all paragraph text inside stays centered too */
+  .paragraph-inner p,
+  .headline-inner h3 {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Center images and keep them responsive */
   img {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    max-width: 100%;
   }
 }
 </style>
-
-					
+				
 				</body></html>
