@@ -623,14 +623,21 @@ window.addEventListener('message', function(e) {
     margin: 0 auto !important;
   }
 	
-/* Force larger size for this specific image on desktop */
-img[src*="New%20Project%20(2).png"] {
-  width: 750px !important;       /* make it noticeably bigger */
-  height: auto !important;
+/* Let the wrapper breathe in case it's capping width */
+.img, .element-wrapper {
   max-width: none !important;
+}
+
+/* Target the specific image with parentheses in its name */
+img[src*="New%20Project%20%282%29.png"] {
+  width: 750px !important;   /* bump this up/down as you like */
+  height: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 auto !important;
   object-fit: contain !important;
 }
-	
+
   /* Center images and keep them responsive */
   img {
     display: block;
