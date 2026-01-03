@@ -16,30 +16,30 @@
             background-color: white;
             color: #333;
             line-height: 1.6;
-            padding: 40px 20px;
+            padding: 20px 15px;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 40px;
+            padding: 20px 15px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .header-icon {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             display: inline-block;
             vertical-align: middle;
-            margin-right: 8px;
+            margin-right: 6px;
         }
 
         .header-text {
-            font-size: 18px;
+            font-size: 16px;
             color: #333;
         }
 
@@ -52,31 +52,33 @@
 
         .subheader {
             text-align: center;
-            font-size: 16px;
+            font-size: 14px;
             color: #666;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
         .subheader span {
             text-decoration: underline;
         }
 
-        .invitation-box {
-            background-color: #fafafa;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 30px;
+        .image-container {
+            margin-bottom: 25px;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 18px;
-            color: #333;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
         }
 
         .instruction {
             text-align: center;
-            font-size: 16px;
+            font-size: 14px;
             color: #666;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
 
         .instruction .yes-link {
@@ -87,55 +89,24 @@
             cursor: default;
         }
 
-        .rsvp-box {
-            background-color: #fafafa;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 50px;
-        }
 
-        .rsvp-text {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .button-group {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 10px 24px;
-            border: 1px solid #d0d0d0;
-            border-radius: 6px;
-            background-color: white;
-            color: #333;
-            font-size: 14px;
-            cursor: default;
-            pointer-events: none;
-        }
 
         .divider {
             border: none;
             border-top: 1px solid #d0d0d0;
-            margin: 50px 0;
+            margin: 30px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             color: #006BFF;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .content-list {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .content-list ul {
@@ -144,9 +115,9 @@
         }
 
         .content-list li {
-            font-size: 16px;
+            font-size: 14px;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             padding-left: 20px;
             position: relative;
         }
@@ -168,10 +139,10 @@
 
         .highlight-text {
             text-align: center;
-            font-size: 16px;
+            font-size: 14px;
             color: #333;
             line-height: 1.8;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .highlight-text a {
@@ -187,16 +158,16 @@
         }
 
         .footer-text {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 500;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .footer-link {
             color: #006BFF;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 500;
         }
 
@@ -217,9 +188,10 @@
             Look for <span>this</span> email from Calendly in your inbox:
         </div>
 
-        <!-- Invitation Box -->
-        <div class="invitation-box">
-            Invitation: _______ and Elias Kim @ Tue Sep 30, 2025 10am - 10:30am (EDT)
+        <!-- Invitation Image -->
+        <!-- PASTE YOUR FIRST IMAGE URL BELOW (Calendly Invitation Screenshot) -->
+        <div class="image-container">
+            <img src="YOUR_INVITATION_IMAGE_URL_HERE" alt="Calendly Invitation">
         </div>
 
         <!-- Instruction -->
@@ -227,15 +199,10 @@
             Make sure you click and confirm <a href="#" class="yes-link">"Yes"</a> at the bottom of the email
         </div>
 
-        <!-- RSVP Box -->
-        <div class="rsvp-box">
-            <div class="rsvp-text">Reply for _______@gmail.com</div>
-            <div class="button-group">
-                <button class="btn">Yes</button>
-                <button class="btn">No</button>
-                <button class="btn">Maybe</button>
-                <button class="btn">More options</button>
-            </div>
+        <!-- RSVP Image -->
+        <!-- PASTE YOUR SECOND IMAGE URL BELOW (RSVP Buttons Screenshot) -->
+        <div class="image-container">
+            <img src="YOUR_RSVP_IMAGE_URL_HERE" alt="RSVP Options">
         </div>
 
         <!-- Divider -->
