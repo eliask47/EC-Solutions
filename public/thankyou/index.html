@@ -275,19 +275,7 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
   <div
     id="render-table"
     class="main_wrapper_main mobile_grid"
-    style="
-      background-color: rgb(255, 255, 255);
-      background-size: auto;
-      background-repeat: no-repeat;
-      padding: 0px;
-      color: rgb(37, 42, 50);
-      font-family: Roboto;
-      font-size: 14px;
-      font-weight: 400;
-      font-style: normal;
-      width: 100%;
-      height: 100%;
-    "
+    style="background-color: rgb(255, 255, 255); background-size: auto; background-repeat: no-repeat; padding: 0px; color: rgb(37, 42, 50); font-family: Roboto; font-size: 14px; font-weight: 400; font-style: normal; width: 100%; height: 100%;"
   >
     <main class="main-wrapper" style="min-height: 100vh;">
       <div class="section_wrapper_891814" id="891814" style="display: flex; flex-direction: column;">
@@ -309,7 +297,7 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
             .el-891814 { display: inherit; }
           </style>
 
-          <!-- SECTION ROW: "You're almost there.." -->
+          <!-- TOP ROW: "You're almost there.." + Loom (FIXED STRUCTURE + FIXED TEXT) -->
           <div class="section_row el-860708" data-eid="860708">
             <span id="860708" class="hidden-anchor"></span>
 
@@ -333,13 +321,9 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 flex-direction: row;
               }
 
-              @media only screen and (max-width: 600px) {
-                .el-891814 .el-860708.section_row {
-                  flex-direction: column;
-                }
-                .el-891814 .el-860708.section_row > .row-column {
-                  width: 100% !important;
-                }
+              @media only screen and (min-width: 0px) and (max-width: 600px) {
+                .el-891814 .el-860708.section_row { flex-direction: column; }
+                .el-891814 .el-860708.section_row > .row-column { width: 100% !important; }
               }
             </style>
 
@@ -355,55 +339,58 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                       font-style: normal;
                       line-height: 1.5;
                       margin: 30px 0px 0px 0px;
-                      padding: 0px 10px;
+                      padding: 0px 10px 0px 10px;
                       text-shadow: transparent 0px 0px 0px;
                     }
 
-                    @media only screen and (max-width: 600px) {
-                      .el-860708 .el-621441 { font-size: 25px; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
+                      .el-860708 .el-621441 { display: inherit; font-size: 25px; }
                     }
                   </style>
 
+                  <!-- FIX: make it ONE inline phrase (no separate strong blocks) -->
                   <div class="paragraph-inner">
-                    <p>
-                      <strong>↪ You're </strong>
-                      <span style="color: rgb(35, 125, 226); margin: 0">
-                        <strong><u>almost</u></strong>
-                      </span>
-                      <strong> there..</strong>
+                    <p style="text-align:center;">
+                      <strong style="display:inline;">
+                        ↪ You're
+                        <span style="color: rgb(35, 125, 226); margin: 0; display:inline;">
+                          <u>almost</u>
+                        </span>
+                        there..
+                      </strong>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <!-- FIXED: Loom embed is now inside the expected Funnelish wrappers -->
+              <!-- FIX: Loom embed is inside the expected Funnelish wrappers (prevents layout weirdness) -->
               <div class="element-wrapper" data-eid="loom-video">
                 <div class="custom el-loom-video" is-popup="false">
-                  <div style="max-width: 900px; margin: 15px auto 0; padding: 0 10px;">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                      <iframe
-                        src="https://www.loom.com/embed/66668ab4b3d34a4d9dd7c482db1ae06c"
-                        frameborder="0"
-                        webkitallowfullscreen
-                        mozallowfullscreen
-                        allowfullscreen
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                      ></iframe>
+                  <div class="custom_render_block">
+                    <div style="max-width: 900px; margin: 18px auto 0; padding: 0 10px;">
+                      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+                        <iframe
+                          src="https://www.loom.com/embed/66668ab4b3d34a4d9dd7c482db1ae06c"
+                          frameborder="0"
+                          webkitallowfullscreen
+                          mozallowfullscreen
+                          allowfullscreen
+                          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- /FIXED Loom -->
+              <!-- /Loom -->
             </div>
           </div>
 
-          <!-- SECTION ROW: Calendly email instructions -->
+          <!-- NEXT ROW: Calendly email instructions (UNCHANGED) -->
           <div class="section_row el-233103" data-eid="233103">
             <span id="233103" class="hidden-anchor"></span>
-
             <style>
               .el-891814 .el-233103.section_row { width: calc(100% - 0px); }
-
               .el-891814 .el-233103.section_row {
                 display: inherit;
                 color: #303030;
@@ -411,8 +398,8 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 text-align: initial;
                 font-weight: 400;
                 font-style: normal;
-                margin: 0px;
-                padding: 0px;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
                 background-color: transparent;
                 background-repeat: no-repeat;
                 background-position: center top;
@@ -420,14 +407,9 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 gap: 0px;
                 flex-direction: row;
               }
-
-              @media only screen and (max-width: 600px) {
-                .el-891814 .el-233103.section_row {
-                  flex-direction: column;
-                }
-                .el-891814 .el-233103.section_row > .row-column {
-                  width: 100% !important;
-                }
+              @media only screen and (min-width: 0px) and (max-width: 600px) {
+                .el-891814 .el-233103.section_row { display: inherit; flex-direction: column; }
+                .el-891814 .el-233103.section_row > .row-column { width: 100% !important; }
               }
             </style>
 
@@ -442,16 +424,14 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                       font-weight: 400;
                       font-style: normal;
                       line-height: 1.5;
-                      margin: 0px;
-                      padding: 10px;
+                      margin: 0px 0px 0px 0px;
+                      padding: 10px 10px 10px 10px;
                       text-shadow: transparent 0px 0px 0px;
                     }
-
-                    @media only screen and (max-width: 600px) {
-                      .el-233103 .el-835860 { font-size: 17px; font-weight: bold; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
+                      .el-233103 .el-835860 { display: inherit; font-size: 17px; font-weight: bold; }
                     }
                   </style>
-
                   <div class="paragraph-inner">
                     <p>Look for <u>this</u> email from Calendly in your inbox:</p>
                   </div>
@@ -461,26 +441,18 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
               <div class="element-wrapper" data-eid="73224">
                 <div class="el-73224 img" is-popup="false">
                   <style>
-                    .el-233103 .el-73224 { display: inherit; margin: 0px; }
+                    .el-233103 .el-73224 { display: inherit; margin: 0px 0px 0px 0px; }
                     .el-233103 .el-73224 { align-items: center; }
                     .el-233103 .el-73224 img {
-                      box-shadow: #0208170A 0px 5px 8px 5px;
+                      box-shadow: #0208170A 3.061616997868383e-16px 5px 8px 5px;
                       object-fit: scale-down;
-                      width: 100%;
-                      height: auto;
                     }
-                    @media only screen and (max-width: 600px) {
+                    .el-233103 .el-73224 img { width: 100%; height: auto; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
                       .el-233103 .el-73224 img { width: 359px; height: 33px; }
                     }
                   </style>
-
-                  <img
-                    src="/images/emailheader.png"
-                    alt="Calendly email header"
-                    width="100%"
-                    height="auto"
-                    loading="lazy"
-                  />
+                  <img src="/images/emailheader.png" alt="Calendly email header" width="100%" height="auto" loading="lazy" />
                 </div>
               </div>
 
@@ -495,14 +467,13 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                       font-style: normal;
                       line-height: 1.5;
                       margin: 10px 0px 0px 0px;
-                      padding: 10px 20px;
+                      padding: 10px 20px 10px 20px;
                       text-shadow: transparent 0px 0px 0px;
                     }
-                    @media only screen and (max-width: 600px) {
-                      .el-233103 .el-165164 { font-size: 17px; font-weight: bold; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
+                      .el-233103 .el-165164 { display: inherit; font-size: 17px; font-weight: bold; }
                     }
                   </style>
-
                   <div class="paragraph-inner">
                     <p>
                       Make sure you click and confirm "
@@ -516,42 +487,26 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
               <div class="element-wrapper" data-eid="553249">
                 <div class="el-553249 img" is-popup="false">
                   <style>
-                    .el-233103 .el-553249 { display: inherit; margin: 0px; }
+                    .el-233103 .el-553249 { display: inherit; margin: 0px 0px 0px 0px; }
                     .el-233103 .el-553249 { align-items: center; }
                     .el-233103 .el-553249 img {
-                      box-shadow: #0208170A 0px 5px 8px 5px;
+                      box-shadow: #0208170A 3.061616997868383e-16px 5px 8px 5px;
                       object-fit: scale-down;
-                      width: 100%;
-                      height: auto;
                     }
-                    @media only screen and (max-width: 600px) {
+                    .el-233103 .el-553249 img { width: 100%; height: auto; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
                       .el-233103 .el-553249 img { width: 355px; height: 68px; }
                     }
                   </style>
-
-                  <img
-                    src="/images/confirm.png"
-                    alt="Confirm email button example"
-                    width="100%"
-                    height="auto"
-                    loading="lazy"
-                  />
+                  <img src="/images/confirm.png" alt="Confirm email button example" width="100%" height="auto" loading="lazy" />
                 </div>
               </div>
 
               <div class="element-wrapper" data-eid="355649">
                 <div class="el-355649 spacer form_group with_edit_btn" is-popup="false" has-link="false">
                   <style>
-                    .el-233103 .el-355649.spacer {
-                      display: inherit;
-                      margin: 0px;
-                      padding: 30px 50px 0px 50px;
-                    }
-                    .el-233103 .el-355649.spacer .inner-spacer {
-                      border-top-width: 1.5px;
-                      border-top-color: #020817;
-                      border-top-style: solid;
-                    }
+                    .el-233103 .el-355649.spacer { display: inherit; margin: 0px 0px 0px 0px; padding: 30px 50px 0px 50px; }
+                    .el-233103 .el-355649.spacer .inner-spacer { border-top-width: 1.5px; border-top-color: #020817; border-top-style: solid; }
                   </style>
                   <div class="inner-spacer"></div>
                 </div>
@@ -568,24 +523,19 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                       font-style: normal;
                       line-height: 1.5;
                       margin: 10px 0px 0px 0px;
-                      padding: 10px 40px;
+                      padding: 10px 40px 10px 40px;
                     }
-                    @media only screen and (max-width: 600px) {
-                      .el-233103 .el-235489 { text-align: left; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
+                      .el-233103 .el-235489 { display: inherit; text-align: left; }
                     }
                   </style>
 
                   <div class="paragraph-inner">
                     <p style="text-align: center">
-                      <span style="font-size: 25px; color: rgb(35, 125, 226); margin: 0">
-                        <strong>What we'll cover on the call:</strong>
-                      </span>
+                      <span style="font-size: 25px; color: rgb(35, 125, 226); margin: 0"><strong>What we'll cover on the call:</strong></span>
                     </p>
-
                     <ul class="bullet__list">
-                      <li>
-                        <p><span style="font-size: 14px; margin: 0">What areas you're struggling in with your current outreach/marketing</span></p>
-                      </li>
+                      <li><p><span style="font-size: 14px; margin: 0">What areas you're struggling in with your current outreach/marketing</span></p></li>
                       <li>
                         <p>
                           <span style="font-size: 14px; margin: 0">The </span>
@@ -593,9 +543,7 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                           <span style="font-size: 14px; margin: 0"> ad strategy that will finally cut the stress of filling your calendar.</span>
                         </p>
                       </li>
-                      <li>
-                        <p><span style="font-size: 14px; margin: 0">How to finally scale past $5k–$10k/month and treat detailing like a real business.</span></p>
-                      </li>
+                      <li><p><span style="font-size: 14px; margin: 0">How to finally scale past $5k–$10k/month and treat detailing like a real business.</span></p></li>
                     </ul>
                   </div>
                 </div>
@@ -603,10 +551,9 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
             </div>
           </div>
 
-          <!-- Remaining sections (unchanged structure, just formatted) -->
+          <!-- REST OF YOUR PAGE (UNCHANGED FROM YOUR SNIPPET) -->
           <div class="section_row el-75888" data-eid="75888">
             <span id="75888" class="hidden-anchor"></span>
-
             <style>
               .el-891814 .el-75888.section_row { width: calc(100% - 0px); }
               .el-891814 .el-75888.section_row {
@@ -616,8 +563,8 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 text-align: initial;
                 font-weight: 400;
                 font-style: normal;
-                margin: 0px;
-                padding: 0px;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
                 background-color: transparent;
                 background-repeat: no-repeat;
                 background-position: center top;
@@ -625,22 +572,17 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 gap: 0px;
                 flex-direction: row;
               }
-              @media only screen and (max-width: 600px) {
-                .el-891814 .el-75888.section_row { flex-direction: column; }
+              @media only screen and (min-width: 0px) and (max-width: 600px) {
+                .el-891814 .el-75888.section_row { display: inherit; flex-direction: column; }
                 .el-891814 .el-75888.section_row > .row-column { width: 100% !important; }
               }
             </style>
-
             <div class="row-column" style="width: 100%;">
               <div class="element-wrapper" data-eid="206282">
                 <div class="el-206282 spacer form_group with_edit_btn" is-popup="false" has-link="false">
                   <style>
-                    .el-75888 .el-206282.spacer { display: inherit; margin: 0px; padding: 10px 50px 0px 50px; }
-                    .el-75888 .el-206282.spacer .inner-spacer {
-                      border-top-width: 1.5px;
-                      border-top-color: #020817;
-                      border-top-style: solid;
-                    }
+                    .el-75888 .el-206282.spacer { display: inherit; margin: 0px 0px 0px 0px; padding: 10px 50px 0px 50px; }
+                    .el-75888 .el-206282.spacer .inner-spacer { border-top-width: 1.5px; border-top-color: #020817; border-top-style: solid; }
                   </style>
                   <div class="inner-spacer"></div>
                 </div>
@@ -650,7 +592,6 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
 
           <div class="section_row el-467438" data-eid="467438">
             <span id="467438" class="hidden-anchor"></span>
-
             <style>
               .el-891814 .el-467438.section_row { width: calc(100% - 0px); }
               .el-891814 .el-467438.section_row {
@@ -660,8 +601,8 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 text-align: initial;
                 font-weight: 400;
                 font-style: normal;
-                margin: 0px;
-                padding: 0px;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
                 background-color: transparent;
                 background-repeat: no-repeat;
                 background-position: center top;
@@ -669,12 +610,11 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 gap: 0px;
                 flex-direction: row;
               }
-              @media only screen and (max-width: 600px) {
-                .el-891814 .el-467438.section_row { flex-direction: column; }
+              @media only screen and (min-width: 0px) and (max-width: 600px) {
+                .el-891814 .el-467438.section_row { display: inherit; flex-direction: column; }
                 .el-891814 .el-467438.section_row > .row-column { width: 100% !important; }
               }
             </style>
-
             <div class="row-column" style="width: 100%;">
               <div class="element-wrapper" data-eid="81083">
                 <div class="paragraph el-81083" is-popup="false">
@@ -686,15 +626,14 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                       font-weight: 400;
                       font-style: normal;
                       line-height: 1.5;
-                      margin: 0px;
-                      padding: 20px 40px;
+                      margin: 0px 0px 0px 0px;
+                      padding: 20px 40px 20px 40px;
                       text-shadow: transparent 0px 0px 0px;
                     }
-                    @media only screen and (max-width: 600px) {
-                      .el-467438 .el-81083 { font-size: 15px; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
+                      .el-467438 .el-81083 { display: inherit; font-size: 15px; }
                     }
                   </style>
-
                   <div class="paragraph-inner">
                     <p>
                       This isn’t just “free info.” It’s the next step towards turning your passion into a
@@ -707,12 +646,8 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
               <div class="element-wrapper" data-eid="993523">
                 <div class="el-993523 spacer form_group with_edit_btn" is-popup="false" has-link="false">
                   <style>
-                    .el-467438 .el-993523.spacer { display: inherit; margin: 0px; padding: 0px 50px; }
-                    .el-467438 .el-993523.spacer .inner-spacer {
-                      border-top-width: 1.5px;
-                      border-top-color: #020817;
-                      border-top-style: solid;
-                    }
+                    .el-467438 .el-993523.spacer { display: inherit; margin: 0px 0px 0px 0px; padding: 0px 50px 0px 50px; }
+                    .el-467438 .el-993523.spacer .inner-spacer { border-top-width: 1.5px; border-top-color: #020817; border-top-style: solid; }
                   </style>
                   <div class="inner-spacer"></div>
                 </div>
@@ -722,7 +657,6 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
 
           <div class="section_row el-145076" data-eid="145076">
             <span id="145076" class="hidden-anchor"></span>
-
             <style>
               .el-891814 .el-145076.section_row { width: calc(100% - 0px); }
               .el-891814 .el-145076.section_row {
@@ -732,8 +666,8 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 text-align: initial;
                 font-weight: 400;
                 font-style: normal;
-                margin: 0px;
-                padding: 0px;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;
                 background-color: transparent;
                 background-repeat: no-repeat;
                 background-position: center top;
@@ -741,8 +675,8 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                 gap: 0px;
                 flex-direction: row;
               }
-              @media only screen and (max-width: 600px) {
-                .el-891814 .el-145076.section_row { flex-direction: column; }
+              @media only screen and (min-width: 0px) and (max-width: 600px) {
+                .el-891814 .el-145076.section_row { display: inherit; flex-direction: column; }
                 .el-891814 .el-145076.section_row > .row-column { width: 100% !important; }
               }
             </style>
@@ -758,11 +692,11 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
                       font-weight: 400;
                       font-style: normal;
                       line-height: 2;
-                      margin: 0px;
-                      padding: 15px 5px;
+                      margin: 0px 0px 0px 0px;
+                      padding: 15px 5px 15px 5px;
                     }
-                    @media only screen and (max-width: 600px) {
-                      .el-145076 .el-262067 { font-size: 15px; }
+                    @media only screen and (min-width: 0px) and (max-width: 600px) {
+                      .el-145076 .el-262067 { display: inherit; font-size: 15px; }
                     }
                   </style>
 
@@ -785,15 +719,11 @@ src="https://www.facebook.com/tr?id=1802695230613863&ev=PageView&noscript=1"
 
   <script src="./thankyou_files/core.min.js.download" type="application/javascript"></script>
 
-  <svg
-    style="display: none !important; visibility: hidden !important; width: 0 !important; height: 0 !important;"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  ></svg>
+  <svg style="display:none !important;visibility:hidden !important;width:0 !important;height:0 !important;" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"></svg>
 
   <!-- n/a -->
   <!-- n/a -->
 </body>
 </html>
+
 
